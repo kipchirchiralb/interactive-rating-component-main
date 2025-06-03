@@ -1,0 +1,137 @@
+:root {
+    --orange: hsl(25, 97%, 53%);
+    --white: hsl(0, 0%, 100%);
+    --light-grey: hsl(217, 12%, 63%);
+    --medium-grey: hsl(216, 12%, 54%);
+    --dark-blue: hsl(213, 19%, 18%);
+    --very-dark-blue: hsl(216, 12%, 8%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Overpass', sans-serif;
+    background-color: var(--very-dark-blue);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--white);
+}
+
+.container {
+    width: 100%;
+    max-width: 412px;
+    padding: 0 24px;
+}
+
+.rating-card, .thank-you-card {
+    background: linear-gradient(to bottom, var(--dark-blue), #1e252f);
+    border-radius: 15px;
+    padding: 32px;
+}
+
+.star-icon {
+    width: 48px;
+    height: 48px;
+    background-color: rgba(124, 135, 152, 0.1);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 24px;
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 12px;
+}
+
+p {
+    color: var(--light-grey);
+    line-height: 1.6;
+    margin-bottom: 24px;
+}
+
+.rating-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 32px;
+}
+
+.rating-btn {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    border: none;
+    background-color: rgba(124, 135, 152, 0.1);
+    color: var(--light-grey);
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.rating-btn:hover {
+    background-color: var(--orange);
+    color: var(--white);
+}
+
+.rating-btn.active {
+    background-color: var(--medium-grey);
+    color: var(--white);
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 14px;
+    border: none;
+    border-radius: 25px;
+    background-color: var(--orange);
+    color: var(--white);
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.submit-btn:hover {
+    background-color: var(--white);
+    color: var(--orange);
+}
+
+.thank-you-card {
+    text-align: center;
+}
+
+.thank-you-card img {
+    margin-bottom: 24px;
+}
+
+.selected-rating {
+    display: inline-block;
+    background-color: rgba(124, 135, 152, 0.1);
+    color: var(--orange);
+    padding: 8px 16px;
+    border-radius: 20px;
+    margin-bottom: 24px;
+}
+
+.hidden {
+    display: none;
+}
+
+@media (max-width: 375px) {
+    .rating-card, .thank-you-card {
+        padding: 24px;
+    }
+
+    .rating-btn {
+        width: 42px;
+        height: 42px;
+    }
+} 
