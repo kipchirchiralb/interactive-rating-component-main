@@ -28,3 +28,7 @@ submitButton.addEventListener('click', () => {
     ratingState.classList.add('hidden');
     thankYouState.classList.remove('hidden');
 });
+
+
+// mobile nav/menu implemented - js
+// implement eldohub's hero section -- slider 
